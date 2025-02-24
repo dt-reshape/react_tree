@@ -1,0 +1,52 @@
+$node-height: 24px;
+$selected-bg-color: #eeeff8;
+
+.fx-tree-node {
+  display: flex;
+  flex-direction: column;
+
+  &-node {
+    display: flex;
+    align-items: center;
+  }
+
+  &-label {
+    height: $node-height;
+
+    &-regular,
+    &-selected {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      height: $node-height;
+      max-height: $node-height;
+      align-items: center;
+    }
+
+    &-selected {
+      background-color: $selected-bg-color;
+    }
+  }
+
+  &-actions {
+    display: flex;
+    gap: 8px;
+    margin-top: 5px;
+  }
+
+  &-children {
+    margin-left: 18px;
+  }
+
+  &-icon {
+    display: flex;
+    align-items: center;
+    height: $node-height;
+    width: $node-height;
+
+    .rotated {
+      transform: rotate(90deg);
+      transition: transform 0.3s ease;
+    }
+  }
+}
